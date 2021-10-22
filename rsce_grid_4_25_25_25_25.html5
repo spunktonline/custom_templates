@@ -1,0 +1,43 @@
+<section style="background-color: <?php echo $this->background ?>" class="grid_4_col <? echo $this->class ?>" <?php
+echo $this->classId
+?>>
+    <div class="container">
+
+        <?php if( $this->headline ): ?>
+            <<?php echo $this->hl ?> itemprop="title" class="title">
+                <?php echo $this->headline ?>
+            </<?php echo $this->hl ?>>
+        <?php endif; ?>
+
+        <div class="row">
+            <?php foreach ($this->list as $item): ?>
+                <div class="col-24 col-md-6">
+
+                    <?php if($item->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($item -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($item->description): ?>
+                            <div class="grid_4_col__description">
+                                <?php echo $item->description ?>
+                            </div>
+                        <?php endif; ?>
+                    <?php else: ?>
+
+                        <?php if($item->description): ?>
+                            <div class="grid_4_col__description">
+                                <?php echo $item->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                        <?php if ($image = $this->arrData['getImageObject']($item -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+
+                </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>

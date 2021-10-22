@@ -1,0 +1,1487 @@
+<section style="background-color: <?php echo $this->background ?>" class="grid_3_col <? echo $this->class ?>" <?php
+echo $this->classId
+?>>
+    <div class="container">
+
+        <?php if( $this->headline ): ?>
+            <<?php echo $this->hl ?> itemprop="title" class="title">
+                <?php echo $this->headline ?>
+            </<?php echo $this->hl ?>>
+        <?php endif; ?>
+
+        <div class="row">
+            <?php if($this->col_definition == 'col_8'): ?>
+                <div class="col-24 col-md-8">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-8">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-8">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif ($this->col_definition == 'col_12_6_6'): ?>
+                <div class="col-24 col-md-12">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_6_12_6'): ?>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-12">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_6_6_12'): ?>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-12">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_10_6_6'): ?>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_6_10_6'): ?>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_6_6_10'): ?>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-6">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_4_10_10'): ?>
+                <div class="col-24 col-md-4">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_10_4_10'): ?>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-4">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php elseif($this->col_definition == 'col_10_10_4'): ?>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position == 'top'): ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'bottom'): ?>
+                        <?php if($this->description): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image = $this->arrData['getImageObject']($this -> image, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-10">
+                    <?php if($this->image_position_1 == 'top'): ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_1): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_1 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_1); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_1 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_1): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_1 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_1 = $this->arrData['getImageObject']($this -> image_1, [null, null, 2])): ?>
+                                <?php $this->insert('image', (array) $image_1); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+                <div class="col-24 col-md-4">
+                    <?php if($this->image_position_2 == 'top'): ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_1 == 'bottom'): ?>
+                        <?php if($this->description_2): ?>
+                            <div class="grid_3_col__description">
+                                <?php echo $this->description_2 ?>
+                            </div>
+                        <?php endif; ?>
+                        <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2])): ?>
+                            <?php $this->insert('image', (array) $image_2); ?>
+                        <?php endif; ?>
+
+                    <?php elseif ($this->image_position_2 == 'image_text'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+                    <?php elseif ($this->image_position_2 == 'text-image'): ?>
+                        <div class="d-block d-md-flex">
+                            <?php if($this->description_2): ?>
+                                <div class="grid_3_col__description">
+                                    <?php echo $this->description_2 ?>
+                                </div>
+                            <?php endif; ?>
+                            <?php if ($image_2 = $this->arrData['getImageObject']($this -> image_2, [null, null, 2]))
+                                : ?>
+                                <?php $this->insert('image', (array) $image_2); ?>
+                            <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+
+    </div>
+</section>

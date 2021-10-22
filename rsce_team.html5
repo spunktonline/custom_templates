@@ -1,0 +1,25 @@
+<div class="<?php echo $this->class ?> block"<?php echo $this->cssID ?>>
+
+	<<?php echo $this->hl ?>><?php echo $this->headline ?></<?php echo $this->hl ?>>
+
+	<?php foreach ($this->members as $member): ?>
+		<div>
+
+			<h2><?php echo $member->name ?></h2>
+
+			<?php if ($image = $this->arrData['getImageObject']($member->image, array(120, 120))): ?>
+				<img src="<?php echo $image->src ?>" alt="<?php echo $image->alt ?: $member->name ?>"<?php echo $image->imgSize ?>>
+			<?php endif ?>
+
+			<ul>
+				<li>E-Mail: {{email::<?php echo $member->email ?>}}</li>
+				<?php foreach ($member->socials as $social): ?>
+					<li><a href="<?php echo $social->url ?>"><?php echo $social->platform ?></a></li>
+				<?php endforeach ?>
+			</ul>
+
+		</div>
+
+	<?php endforeach ?>
+
+</div>
